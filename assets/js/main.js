@@ -726,13 +726,13 @@ function getAllSanPham() {
                           <a
                             aria-label="Add To Wishlist"
                             class="action-btn hover-up"
-                            href="shop-wishlist.html"
+                            href="#"
                             ><i class="fi-rs-heart"></i
                           ></a>
                           <a
                             aria-label="Compare"
                             class="action-btn hover-up"
-                            href="shop-compare.html"
+                            href="#"
                             ><i class="fi-rs-shuffle"></i
                           ></a>
                         </div>
@@ -801,14 +801,14 @@ function getAllSanPham() {
             <a
               aria-label="Add To Wishlist"
               class="action-btn small hover-up"
-              href="shop-wishlist.html"
+              href="#"
               tabindex="0"
               ><i class="fi-rs-heart"></i
             ></a>
             <a
               aria-label="Compare"
               class="action-btn small hover-up"
-              href="shop-compare.html"
+              href="#"
               tabindex="0"
               ><i class="fi-rs-shuffle"></i
             ></a>
@@ -896,8 +896,8 @@ function getAllSanPham() {
         </div>
         <div class="product-extra-link2">
             <button type="submit" class="button button-add-to-cart">Add to cart</button>
-            <a aria-label="Add To Wishlist" class="action-btn hover-up" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
-            <a aria-label="Compare" class="action-btn hover-up" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+            <a aria-label="Add To Wishlist" class="action-btn hover-up" href="#"><i class="fi-rs-heart"></i></a>
+            <a aria-label="Compare" class="action-btn hover-up" href="#"><i class="fi-rs-shuffle"></i></a>
         </div>
     </div>
     <ul class="product-meta font-xs color-grey mt-50">
@@ -943,8 +943,8 @@ function getAllSanPham() {
               <div class="product-action-1">
                   <a aria-label="Quick view" class="action-btn small hover-up" data-bs-toggle="modal" data-bs-target="#quickViewModal
   "><i class="fi-rs-search"></i></a>
-                  <a aria-label="Add To Wishlist" class="action-btn small hover-up" href="shop-wishlist.html" tabindex="0"><i class="fi-rs-heart"></i></a>
-                  <a aria-label="Compare" class="action-btn small hover-up" href="shop-compare.html" tabindex="0"><i class="fi-rs-shuffle"></i></a>
+                  <a aria-label="Add To Wishlist" class="action-btn small hover-up" href="#" tabindex="0"><i class="fi-rs-heart"></i></a>
+                  <a aria-label="Compare" class="action-btn small hover-up" href="#" tabindex="0"><i class="fi-rs-shuffle"></i></a>
               </div>
               <div class="product-badges product-badges-position product-badges-mrg">
                   <span class="hot">Hot</span>

@@ -1,9 +1,9 @@
 /***
- Theme Name: Evara
- Theme URI: http://wp.alithemes.com/html/Evara
+ Theme Name: cyber
+ Theme URI: http://wp.Cybersoft/html/cyber
  Description: eCommerce HTML + Admin Template
- Author: alithemes.com
- Author URI: http://alithemes.com
+ Author: Cybersoft
+ Author URI: #
  Version: 1.0
  License: GNU General Public License v2 or later
  License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -34,7 +34,7 @@ TABLE CONTENT
 /*import vendors*/
 @import url(vendors/normalize.css);
 @import url(vendors/bootstrap.min.css);
-@import url(vendors/evara-font.css);
+@import url(vendors/cyber-font.css);
 @import url(vendors/uicons-regular-straight.css);
 /*import plugins*/
 @import url(plugins/jquery-ui.css);
