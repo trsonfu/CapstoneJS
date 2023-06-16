@@ -698,139 +698,139 @@ function getAllSanPham() {
     for (var i = 0; i < arr.length; i++) {
       let sanPham = arr[i];
       (content += `
-          <div class="col-lg-3 col-md-4 col-12 col-sm-6">
-                    <div class="product-cart-wrap mb-30">
-                      <div class="product-img-action-wrap">
-                        <div class="product-img product-img-zoom">
-                          <a href="shop-product-full.html?id=${sanPham.id}">
-                            <img
-                              class="default-img"
-                              src="${sanPham.image}"
-                              alt=""
-                            />
-                            <img
-                              class="hover-img"
-                              src="${sanPham.image}"
-                              alt=""
-                            />
-                          </a>
-                        </div>
-                        <div class="product-action-1">
-                          <a
-                            aria-label="Quick view"
-                            class="action-btn hover-up"
-                            data-bs-toggle="modal"
-                            data-bs-target="#quickViewModal"
-                            ><i class="fi-rs-eye"></i
-                          ></a>
-                          <a
-                            aria-label="Add To Wishlist"
-                            class="action-btn hover-up"
-                            href="#"
-                            ><i class="fi-rs-heart"></i
-                          ></a>
-                          <a
-                            aria-label="Compare"
-                            class="action-btn hover-up"
-                            href="#"
-                            ><i class="fi-rs-shuffle"></i
-                          ></a>
-                        </div>
-                        <div
-                          class="product-badges product-badges-position product-badges-mrg"
-                        >
-                          <span class="hot">Hot</span>
-                        </div>
-                      </div>
-                      <div class="product-content-wrap">
-                        <div class="product-category">
-                          <a href="shop-grid-right.html">Clothing</a>
-                        </div>
-                        <h2>
-                          <a href="shop-product-right.html"
-                            >${sanPham.name}</a
+            <div class="col-lg-3 col-md-4 col-12 col-sm-6">
+                      <div class="product-cart-wrap mb-30">
+                        <div class="product-img-action-wrap">
+                          <div class="product-img product-img-zoom">
+                            <a href="shop-product-full.html?id=${sanPham.id}">
+                              <img
+                                class="default-img"
+                                src="${sanPham.image}"
+                                alt=""
+                              />
+                              <img
+                                class="hover-img"
+                                src="${sanPham.image}"
+                                alt=""
+                              />
+                            </a>
+                          </div>
+                          <div class="product-action-1">
+                            <a
+                              aria-label="Quick view"
+                              class="action-btn hover-up"
+                              data-bs-toggle="modal"
+                              data-bs-target="#quickViewModal"
+                              ><i class="fi-rs-eye"></i
+                            ></a>
+                            <a
+                              aria-label="Add To Wishlist"
+                              class="action-btn hover-up"
+                              href="#"
+                              ><i class="fi-rs-heart"></i
+                            ></a>
+                            <a
+                              aria-label="Compare"
+                              class="action-btn hover-up"
+                              href="#"
+                              ><i class="fi-rs-shuffle"></i
+                            ></a>
+                          </div>
+                          <div
+                            class="product-badges product-badges-position product-badges-mrg"
                           >
-                        </h2>
-                        <div class="rating-result" title="90%">
-                          <span>
-                            <span>90%</span>
-                          </span>
+                            <span class="hot">Hot</span>
+                          </div>
                         </div>
-                        <div class="product-price">
-                          <span>${sanPham.price}</span>
-                          <span class="old-price">$245.8</span>
-                        </div>
-                        <div class="product-action-1 show">
-                          <a
-                            aria-label="Add To Cart"
-                            class="action-btn hover-up"
-                            href="shop-cart.html"
-                            ><i class="fi-rs-shopping-bag-add"></i
-                          ></a>
+                        <div class="product-content-wrap">
+                          <div class="product-category">
+                            <a href="shop-grid-right.html">Clothing</a>
+                          </div>
+                          <h2>
+                            <a href="shop-product-right.html"
+                              >${sanPham.name}</a
+                            >
+                          </h2>
+                          <div class="rating-result" title="90%">
+                            <span>
+                              <span>90%</span>
+                            </span>
+                          </div>
+                          <div class="product-price">
+                            <span>${sanPham.price}</span>
+                            <span class="old-price">$245.8</span>
+                          </div>
+                          <div class="product-action-1 show">
+                            <a
+                              aria-label="Add To Cart"
+                              class="action-btn hover-up"
+                              href="shop-cart.html"
+                              ><i class="fi-rs-shopping-bag-add"></i
+                            ></a>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-          `),
+            `),
         (newArrivals += `
-        <div class="product-cart-wrap small hover-up">
-        <div class="product-img-action-wrap">
-          <div class="product-img product-img-zoom">
-            <a href="shop-product-right.html">
-              <img
-                class="default-img"
-                src="assets/imgs/shop/product-4-1.jpg"
-                alt=""
-              />
-              <img
-                class="hover-img"
-                src="assets/imgs/shop/product-4-2.jpg"
-                alt=""
-              />
-            </a>
-          </div>
-          <div class="product-action-1">
-            <a
-              aria-label="Quick view"
-              class="action-btn small hover-up"
-              data-bs-toggle="modal"
-              data-bs-target="#quickViewModal"
+          <div class="product-cart-wrap small hover-up">
+          <div class="product-img-action-wrap">
+            <div class="product-img product-img-zoom">
+              <a href="shop-product-right.html">
+                <img
+                  class="default-img"
+                  src="assets/imgs/shop/product-4-1.jpg"
+                  alt=""
+                />
+                <img
+                  class="hover-img"
+                  src="assets/imgs/shop/product-4-2.jpg"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="product-action-1">
+              <a
+                aria-label="Quick view"
+                class="action-btn small hover-up"
+                data-bs-toggle="modal"
+                data-bs-target="#quickViewModal"
+              >
+                <i class="fi-rs-eye"></i
+              ></a>
+              <a
+                aria-label="Add To Wishlist"
+                class="action-btn small hover-up"
+                href="#"
+                tabindex="0"
+                ><i class="fi-rs-heart"></i
+              ></a>
+              <a
+                aria-label="Compare"
+                class="action-btn small hover-up"
+                href="#"
+                tabindex="0"
+                ><i class="fi-rs-shuffle"></i
+              ></a>
+            </div>
+            <div
+              class="product-badges product-badges-position product-badges-mrg"
             >
-              <i class="fi-rs-eye"></i
-            ></a>
-            <a
-              aria-label="Add To Wishlist"
-              class="action-btn small hover-up"
-              href="#"
-              tabindex="0"
-              ><i class="fi-rs-heart"></i
-            ></a>
-            <a
-              aria-label="Compare"
-              class="action-btn small hover-up"
-              href="#"
-              tabindex="0"
-              ><i class="fi-rs-shuffle"></i
-            ></a>
+              <span class="new">New</span>
+            </div>
           </div>
-          <div
-            class="product-badges product-badges-position product-badges-mrg"
-          >
-            <span class="new">New</span>
+          <div class="product-content-wrap">
+            <h2><a href="shop-product-right.html">Aliquam posuere</a></h2>
+            <div class="rating-result" title="90%">
+              <span> </span>
+            </div>
+            <div class="product-price">
+              <span>$173.85 </span>
+              <span class="old-price">$185.8</span>
+            </div>
           </div>
-        </div>
-        <div class="product-content-wrap">
-          <h2><a href="shop-product-right.html">Aliquam posuere</a></h2>
-          <div class="rating-result" title="90%">
-            <span> </span>
-          </div>
-          <div class="product-price">
-            <span>$173.85 </span>
-            <span class="old-price">$185.8</span>
-          </div>
-        </div>
-    </div>
-        `);
+      </div>
+          `);
     }
     // document.getElementById("carausel-6-columns-2").innerHTML = newArrivals;
     document.getElementById("tbodySanPham").innerHTML = content;
@@ -840,84 +840,91 @@ function getAllSanPham() {
   function renderChiTietSanPham(sanPham) {
     var content = "";
     content += `
-    <h2 class="title-detail">${sanPham.name}</h2>
-    <div class="product-detail-rating">
-        <div class="pro-details-brand">
-            <span> Brands: <a href="shop-grid-right.html">Bootstrap</a></span>
-        </div>
-        <div class="product-rate-cover text-end">
-            <div class="product-rate d-inline-block">
-                <div class="product-rating" style="width:90%">
-                </div>
-            </div>
-            <span class="font-small ml-5 text-muted"> (25 reviews)</span>
-        </div>
-    </div>
-    <div class="clearfix product-price-cover">
-        <div class="product-price primary-color float-left">
-            <ins><span class="text-brand">$${sanPham.price}</span></ins>
-            <ins><span class="old-price font-md ml-15">$200.00</span></ins>
-            <span class="save-price  font-md color3 ml-15">25% Off</span>
-        </div>
-    </div>
-    <div class="bt-1 border-color-1 mt-15 mb-15"></div>
-    <div class="short-desc mb-30">
-    <p>${sanPham.shortDescription}</p></div>
-    <div class="product_sort_info font-xs mb-30">
-        <ul>
-            <li class="mb-10"><i class="fi-rs-crown mr-5"></i> 1 Year AL Jazeera Brand Warranty</li>
-            <li class="mb-10"><i class="fi-rs-refresh mr-5"></i> 30 Day Return Policy</li>
-            <li><i class="fi-rs-credit-card mr-5"></i> Cash on Delivery available</li>
-        </ul>
-    </div>
-    <div class="attr-detail attr-color mb-15">
-        <strong class="mr-10">Color</strong>
-        <ul class="list-filter color-filter">
-            <li><a href="#" data-color="Red"><span class="product-color-red"></span></a></li>
-            <li><a href="#" data-color="Yellow"><span class="product-color-yellow"></span></a></li>
-            <li class="active"><a href="#" data-color="White"><span class="product-color-white"></span></a></li>
-            <li><a href="#" data-color="Orange"><span class="product-color-orange"></span></a></li>
-            <li><a href="#" data-color="Cyan"><span class="product-color-cyan"></span></a></li>
-            <li><a href="#" data-color="Green"><span class="product-color-green"></span></a></li>
-            <li><a href="#" data-color="Purple"><span class="product-color-purple"></span></a></li>
-        </ul>
-    </div>
-    <div class="attr-detail attr-size" >
-        <strong class="mr-10">Size</strong>
-        <ul class="list-filter size-filter font-small" id="sizeSanPham">
-        </ul>
-    </div>
-    <div class="bt-1 border-color-1 mt-30 mb-30"></div>
-    <div class="detail-extralink">
-        <div class="detail-qty border radius">
-            <a href="#" class="qty-down"><i class="fi-rs-angle-small-down"></i></a>
-            <span class="qty-val">1</span>
-            <a href="#" class="qty-up"><i class="fi-rs-angle-small-up"></i></a>
-        </div>
-        <div class="product-extra-link2">
-            <button type="submit" class="button button-add-to-cart">Add to cart</button>
-            <a aria-label="Add To Wishlist" class="action-btn hover-up" href="#"><i class="fi-rs-heart"></i></a>
-            <a aria-label="Compare" class="action-btn hover-up" href="#"><i class="fi-rs-shuffle"></i></a>
-        </div>
-    </div>
-    <ul class="product-meta font-xs color-grey mt-50">
-        <li class="mb-5">SKU: <a href="#">FWM15VKT</a></li>
-        <li class="mb-5">Tags: <a href="#" rel="tag">Cloth</a>, <a href="#" rel="tag">Women</a>, <a href="#" rel="tag">Dress</a> </li>
-        <li>Availability:<span class="in-stock text-success ml-5">${sanPham.quantity} items in stock</span></li>
-    </ul>
-          `;
+      <h2 class="title-detail">${sanPham.name}</h2>
+      <div class="product-detail-rating">
+          <div class="pro-details-brand">
+              <span> Brands: <a href="shop-grid-right.html">Bootstrap</a></span>
+          </div>
+          <div class="product-rate-cover text-end">
+              <div class="product-rate d-inline-block">
+                  <div class="product-rating" style="width:90%">
+                  </div>
+              </div>
+              <span class="font-small ml-5 text-muted"> (25 reviews)</span>
+          </div>
+      </div>
+      <div class="clearfix product-price-cover">
+          <div class="product-price primary-color float-left">
+              <ins><span class="text-brand">$${sanPham.price}</span></ins>
+              <ins><span class="old-price font-md ml-15">$200.00</span></ins>
+              <span class="save-price  font-md color3 ml-15">25% Off</span>
+          </div>
+      </div>
+      <div class="bt-1 border-color-1 mt-15 mb-15"></div>
+      <div class="short-desc mb-30">
+      <p>${sanPham.shortDescription}</p></div>
+      <div class="product_sort_info font-xs mb-30">
+          <ul>
+              <li class="mb-10"><i class="fi-rs-crown mr-5"></i> 1 Year AL Jazeera Brand Warranty</li>
+              <li class="mb-10"><i class="fi-rs-refresh mr-5"></i> 30 Day Return Policy</li>
+              <li><i class="fi-rs-credit-card mr-5"></i> Cash on Delivery available</li>
+          </ul>
+      </div>
+      <div class="attr-detail attr-color mb-15">
+          <strong class="mr-10">Color</strong>
+          <ul class="list-filter color-filter">
+              <li><a href="#" data-color="Red"><span class="product-color-red"></span></a></li>
+              <li><a href="#" data-color="Yellow"><span class="product-color-yellow"></span></a></li>
+              <li class="active"><a href="#" data-color="White"><span class="product-color-white"></span></a></li>
+              <li><a href="#" data-color="Orange"><span class="product-color-orange"></span></a></li>
+              <li><a href="#" data-color="Cyan"><span class="product-color-cyan"></span></a></li>
+              <li><a href="#" data-color="Green"><span class="product-color-green"></span></a></li>
+              <li><a href="#" data-color="Purple"><span class="product-color-purple"></span></a></li>
+          </ul>
+      </div>
+      <div class="attr-detail attr-size" >
+          <strong class="mr-10">Size</strong>
+          <ul class="list-filter size-filter font-small" id="sizeSanPham">
+          </ul>
+      </div>
+      <div class="bt-1 border-color-1 mt-30 mb-30"></div>
+      <div class="detail-extralink">
+          <div class="detail-qty border radius">
+              <a href="#" class="qty-down"><i class="fi-rs-angle-small-down"></i></a>
+              <span class="qty-val">1</span>
+              <a href="#" class="qty-up"><i class="fi-rs-angle-small-up"></i></a>
+          </div>
+          <div class="product-extra-link2">
+              <button type="submit" class="button button-add-to-cart">Add to cart</button>
+              <a aria-label="Add To Wishlist" class="action-btn hover-up" href="#"><i class="fi-rs-heart"></i></a>
+              <a aria-label="Compare" class="action-btn hover-up" href="#"><i class="fi-rs-shuffle"></i></a>
+          </div>
+      </div>
+      <ul class="product-meta font-xs color-grey mt-50">
+          <li class="mb-5">SKU: <a href="#">FWM15VKT</a></li>
+          <li class="mb-5">Tags: <a href="#" rel="tag">Cloth</a>, <a href="#" rel="tag">Women</a>, <a href="#" rel="tag">Dress</a> </li>
+          <li>Availability:<span class="in-stock text-success ml-5">${sanPham.quantity} items in stock</span></li>
+      </ul>
+            `;
     var hinhAnh = "";
     hinhAnh += `
-              <img
-                src="${sanPham.image}"
-                alt="product image"
-              />
-                  `;
+                <img
+                  src="${sanPham.image}"
+                  alt="product image"
+                />
+                    `;
     var moTa = "";
     moTa += `
-                           <p>${sanPham.description}</p>
-             `;
+                             <p>${sanPham.description}</p>
+               `;
   
+    var tenSanPham = "";
+    tenSanPham += `          
+    <a href="index.html" rel="nofollow">Home</a>
+      <span></span> Fashion <span></span> ${sanPham.name}
+               `;
+  
+    document.getElementById("productNameTitel").innerHTML = tenSanPham;
     document.getElementById("chiTietSanPham").innerHTML = content;
     document.getElementById("tbodyHinhAnh").innerHTML = hinhAnh;
     document.getElementById("Description").innerHTML = moTa;
@@ -931,39 +938,39 @@ function getAllSanPham() {
     for (i = 0; i < arrRelatedProtc.length; i++) {
       var relatedSanPham = arrRelatedProtc[i];
       related += `
-      <div class="col-lg-3 col-md-4 col-12 col-sm-6">
-      <div class="product-cart-wrap small hover-up">
-          <div class="product-img-action-wrap">
-              <div class="product-img product-img-zoom">
-                  <a href="shop-product-full.html?id=${relatedSanPham.id}" tabindex="0">
-                      <img class="default-img" src="${relatedSanPham.image}" alt="">
-                      <img class="hover-img" src="${relatedSanPham.image}" alt="">
-                  </a>
-              </div>
-              <div class="product-action-1">
-                  <a aria-label="Quick view" class="action-btn small hover-up" data-bs-toggle="modal" data-bs-target="#quickViewModal
-  "><i class="fi-rs-search"></i></a>
-                  <a aria-label="Add To Wishlist" class="action-btn small hover-up" href="#" tabindex="0"><i class="fi-rs-heart"></i></a>
-                  <a aria-label="Compare" class="action-btn small hover-up" href="#" tabindex="0"><i class="fi-rs-shuffle"></i></a>
-              </div>
-              <div class="product-badges product-badges-position product-badges-mrg">
-                  <span class="hot">Hot</span>
-              </div>
-          </div>
-          <div class="product-content-wrap">
-              <h2><a href="shop-product-right.html" tabindex="0">${relatedSanPham.name}</a></h2>
-              <div class="rating-result" title="90%">
-                  <span>
-                  </span>
-              </div>
-              <div class="product-price">
-                  <span>${relatedSanPham.price}</span>
-                  <span class="old-price">${relatedSanPham.price}</span>
-              </div>
-          </div>
-      </div>
-  </div>
-      `;
+        <div class="col-lg-3 col-md-4 col-12 col-sm-6">
+        <div class="product-cart-wrap small hover-up">
+            <div class="product-img-action-wrap">
+                <div class="product-img product-img-zoom">
+                    <a href="shop-product-full.html?id=${relatedSanPham.id}" tabindex="0">
+                        <img class="default-img" src="${relatedSanPham.image}" alt="">
+                        <img class="hover-img" src="${relatedSanPham.image}" alt="">
+                    </a>
+                </div>
+                <div class="product-action-1">
+                    <a aria-label="Quick view" class="action-btn small hover-up" data-bs-toggle="modal" data-bs-target="#quickViewModal
+    "><i class="fi-rs-search"></i></a>
+                    <a aria-label="Add To Wishlist" class="action-btn small hover-up" href="#" tabindex="0"><i class="fi-rs-heart"></i></a>
+                    <a aria-label="Compare" class="action-btn small hover-up" href="#" tabindex="0"><i class="fi-rs-shuffle"></i></a>
+                </div>
+                <div class="product-badges product-badges-position product-badges-mrg">
+                    <span class="hot">Hot</span>
+                </div>
+            </div>
+            <div class="product-content-wrap">
+                <h2><a href="shop-product-right.html" tabindex="0">${relatedSanPham.name}</a></h2>
+                <div class="rating-result" title="90%">
+                    <span>
+                    </span>
+                </div>
+                <div class="product-price">
+                    <span>${relatedSanPham.price}</span>
+                    <span class="old-price">${relatedSanPham.price}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+        `;
     }
     document.getElementById("relatedProducts").innerHTML = related;
   }
@@ -1117,8 +1124,8 @@ function getAllSanPham() {
     for (i = 0; i < arrSize.length; i++) {
       var sizeListSanPham = arrSize[i];
       sizeList += `
-                <li><a href="#">${sizeListSanPham}</a></li>
-                `;
+                  <li><a href="#">${sizeListSanPham}</a></li>
+                  `;
     }
     document.getElementById("sizeSanPham").innerHTML = sizeList;
   
@@ -1148,6 +1155,7 @@ function getAllSanPham() {
     });
     promise.catch(function (err) {
       console.log(err);
+      
     });
   }
   
@@ -1172,6 +1180,7 @@ function getAllSanPham() {
     });
     promise.catch(function (err) {
       console.log(err);
+      alert("Sai tài khoản hoặc mật khẩu, vui lòng kiểm tra lại");
     });
   }
   

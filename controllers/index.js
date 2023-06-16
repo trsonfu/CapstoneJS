@@ -1,47 +1,46 @@
-
 function getAllSanPham() {
-    var promise = axios({
-      url: "https://shop.cyberlearn.vn/api/Product",
-      mothod: "get",
-    });
-    promise.then(function (res) {
-      console.log(res);
-      renderSanPham(res.data.content);
-    });
-    promise.catch(function (err) {
-      console.log(err);
-    });
-  }
-  getAllSanPham();
-  
-  // Render chi tiết sản phẩm dựa trên id
-  
-  function getChiTietSanPham() {
-    let search = window.location.search;
-    let urlParams = new URLSearchParams(search);
-    console.log(urlParams);
-    let id = urlParams.get("id");
-    var promiseChiTiet = axios({
-      url: "https://shop.cyberlearn.vn/api/Product/getbyid?id=" + id,
-      mothod: "get",
-    });
-    promiseChiTiet.then(function (res) {
-      console.log(res);
-      renderChiTietSanPham(res.data.content);
-    });
-    promiseChiTiet.catch(function (err) {
-      console.log(err);
-    });
-  }
-  getChiTietSanPham();
-  
-  // Render sản phẩm ra ngoài index
-  function renderSanPham(arr) {
-    let content = "";
-    let newArrivals = "";
-    for (var i = 0; i < arr.length; i++) {
-      let sanPham = arr[i];
-      (content += `
+  var promise = axios({
+    url: "https://shop.cyberlearn.vn/api/Product",
+    mothod: "get",
+  });
+  promise.then(function (res) {
+    console.log(res);
+    renderSanPham(res.data.content);
+  });
+  promise.catch(function (err) {
+    console.log(err);
+  });
+}
+getAllSanPham();
+
+// Render chi tiết sản phẩm dựa trên id
+
+function getChiTietSanPham() {
+  let search = window.location.search;
+  let urlParams = new URLSearchParams(search);
+  console.log(urlParams);
+  let id = urlParams.get("id");
+  var promiseChiTiet = axios({
+    url: "https://shop.cyberlearn.vn/api/Product/getbyid?id=" + id,
+    mothod: "get",
+  });
+  promiseChiTiet.then(function (res) {
+    console.log(res);
+    renderChiTietSanPham(res.data.content);
+  });
+  promiseChiTiet.catch(function (err) {
+    console.log(err);
+  });
+}
+getChiTietSanPham();
+
+// Render sản phẩm ra ngoài index
+function renderSanPham(arr) {
+  let content = "";
+  let newArrivals = "";
+  for (var i = 0; i < arr.length; i++) {
+    let sanPham = arr[i];
+    (content += `
           <div class="col-lg-3 col-md-4 col-12 col-sm-6">
                     <div class="product-cart-wrap mb-30">
                       <div class="product-img-action-wrap">
@@ -116,7 +115,7 @@ function getAllSanPham() {
                     </div>
                   </div>
           `),
-        (newArrivals += `
+      (newArrivals += `
         <div class="product-cart-wrap small hover-up">
         <div class="product-img-action-wrap">
           <div class="product-img product-img-zoom">
@@ -175,15 +174,15 @@ function getAllSanPham() {
         </div>
     </div>
         `);
-    }
-    // document.getElementById("carausel-6-columns-2").innerHTML = newArrivals;
-    document.getElementById("tbodySanPham").innerHTML = content;
   }
-  
-  // Render chi tiết sản phẩm dựa trên id
-  function renderChiTietSanPham(sanPham) {
-    var content = "";
-    content += `
+  // document.getElementById("carausel-6-columns-2").innerHTML = newArrivals;
+  document.getElementById("tbodySanPham").innerHTML = content;
+}
+
+// Render chi tiết sản phẩm dựa trên id
+function renderChiTietSanPham(sanPham) {
+  var content = "";
+  content += `
     <h2 class="title-detail">${sanPham.name}</h2>
     <div class="product-detail-rating">
         <div class="pro-details-brand">
@@ -250,31 +249,38 @@ function getAllSanPham() {
         <li>Availability:<span class="in-stock text-success ml-5">${sanPham.quantity} items in stock</span></li>
     </ul>
           `;
-    var hinhAnh = "";
-    hinhAnh += `
+  var hinhAnh = "";
+  hinhAnh += `
               <img
                 src="${sanPham.image}"
                 alt="product image"
               />
                   `;
-    var moTa = "";
-    moTa += `
+  var moTa = "";
+  moTa += `
                            <p>${sanPham.description}</p>
              `;
-  
-    document.getElementById("chiTietSanPham").innerHTML = content;
-    document.getElementById("tbodyHinhAnh").innerHTML = hinhAnh;
-    document.getElementById("Description").innerHTML = moTa;
-  
-    renderRelatedProducts(sanPham.relatedProducts);
-    sizeSanPham(sanPham.size);
-  }
-  
-  function renderRelatedProducts(arrRelatedProtc) {
-    var related = "";
-    for (i = 0; i < arrRelatedProtc.length; i++) {
-      var relatedSanPham = arrRelatedProtc[i];
-      related += `
+
+  var tenSanPham = "";
+  tenSanPham += `          
+  <a href="index.html" rel="nofollow">Home</a>
+    <span></span> Fashion <span></span> ${sanPham.name}
+             `;
+
+  document.getElementById("productNameTitel").innerHTML = tenSanPham;
+  document.getElementById("chiTietSanPham").innerHTML = content;
+  document.getElementById("tbodyHinhAnh").innerHTML = hinhAnh;
+  document.getElementById("Description").innerHTML = moTa;
+
+  renderRelatedProducts(sanPham.relatedProducts);
+  sizeSanPham(sanPham.size);
+}
+
+function renderRelatedProducts(arrRelatedProtc) {
+  var related = "";
+  for (i = 0; i < arrRelatedProtc.length; i++) {
+    var relatedSanPham = arrRelatedProtc[i];
+    related += `
       <div class="col-lg-3 col-md-4 col-12 col-sm-6">
       <div class="product-cart-wrap small hover-up">
           <div class="product-img-action-wrap">
@@ -308,215 +314,215 @@ function getAllSanPham() {
       </div>
   </div>
       `;
-    }
-    document.getElementById("relatedProducts").innerHTML = related;
   }
-  
-  // QuickView sản phẩm đang fix
-  // function renderQuickeView(arrQuickView) {
-  //   var quickViewProduct = "";
-  //   for (i = 0; i < arrQuickView.length; i++) {
-  //     var relatedSanPham = arrQuickView[i];
-  //     quickViewProduct += `
-  //   <div class="col-md-6 col-sm-12 col-xs-12">
-  //   <div class="detail-gallery">
-  //     <span class="zoom-icon"><i class="fi-rs-search"></i></span>
-  //     <!-- MAIN SLIDES -->
-  //     <div class="product-image-slider">
-  //       <figure class="border-radius-10">
-  //         <img
-  //           src="assets/imgs/shop/product-16-2.jpg"
-  //           alt="product image"
-  //         />
-  //       </figure>
-  //       <figure class="border-radius-10">
-  //         <img
-  //           src="assets/imgs/shop/product-16-1.jpg"
-  //           alt="product image"
-  //         />
-  //       </figure>
-  //       <figure class="border-radius-10">
-  //         <img
-  //           src="assets/imgs/shop/product-16-3.jpg"
-  //           alt="product image"
-  //         />
-  //       </figure>
-  //       <figure class="border-radius-10">
-  //         <img
-  //           src="assets/imgs/shop/product-16-4.jpg"
-  //           alt="product image"
-  //         />
-  //       </figure>
-  //       <figure class="border-radius-10">
-  //         <img
-  //           src="assets/imgs/shop/product-16-5.jpg"
-  //           alt="product image"
-  //         />
-  //       </figure>
-  //       <figure class="border-radius-10">
-  //         <img
-  //           src="assets/imgs/shop/product-16-6.jpg"
-  //           alt="product image"
-  //         />
-  //       </figure>
-  //       <figure class="border-radius-10">
-  //         <img
-  //           src="assets/imgs/shop/product-16-7.jpg"
-  //           alt="product image"
-  //         />
-  //       </figure>
-  //     </div>
-  //     <!-- THUMBNAILS -->
-  //     <div class="slider-nav-thumbnails pl-15 pr-15">
-  //       <div>
-  //         <img
-  //           src="assets/imgs/shop/thumbnail-3.jpg"
-  //           alt="product image"
-  //         />
-  //       </div>
-  //       <div>
-  //         <img
-  //           src="assets/imgs/shop/thumbnail-4.jpg"
-  //           alt="product image"
-  //         />
-  //       </div>
-  //       <div>
-  //         <img
-  //           src="assets/imgs/shop/thumbnail-5.jpg"
-  //           alt="product image"
-  //         />
-  //       </div>
-  //       <div>
-  //         <img
-  //           src="assets/imgs/shop/thumbnail-6.jpg"
-  //           alt="product image"
-  //         />
-  //       </div>
-  //       <div>
-  //         <img
-  //           src="assets/imgs/shop/thumbnail-7.jpg"
-  //           alt="product image"
-  //         />
-  //       </div>
-  //       <div>
-  //         <img
-  //           src="assets/imgs/shop/thumbnail-8.jpg"
-  //           alt="product image"
-  //         />
-  //       </div>
-  //       <div>
-  //         <img
-  //           src="assets/imgs/shop/thumbnail-9.jpg"
-  //           alt="product image"
-  //         />
-  //       </div>
-  //     </div>
-  //   </div>
-  //   <!-- End Gallery -->
-  //   <div class="social-icons single-share">
-  //     <ul class="text-grey-5 d-inline-block">
-  //       <li><strong class="mr-10">Share this:</strong></li>
-  //       <li class="social-facebook">
-  //         <a href="#"
-  //           ><img
-  //             src="assets/imgs/theme/icons/icon-facebook.svg"
-  //             alt=""
-  //         /></a>
-  //       </li>
-  //       <li class="social-twitter">
-  //         <a href="#"
-  //           ><img
-  //             src="assets/imgs/theme/icons/icon-twitter.svg"
-  //             alt=""
-  //         /></a>
-  //       </li>
-  //       <li class="social-instagram">
-  //         <a href="#"
-  //           ><img
-  //             src="assets/imgs/theme/icons/icon-instagram.svg"
-  //             alt=""
-  //         /></a>
-  //       </li>
-  //       <li class="social-linkedin">
-  //         <a href="#"
-  //           ><img
-  //             src="assets/imgs/theme/icons/icon-pinterest.svg"
-  //             alt=""
-  //         /></a>
-  //       </li>
-  //     </ul>
-  //   </div>
-  // </div>
-  // <div class="col-md-6 col-sm-12 col-xs-12">
-  //   <div class="detail-info">
-  //   </div>
-  //   <!-- Detail Info -->
-  // </div>`;
-  //   }
-  //   document.getElementById("quickView").innerHTML = quickViewProduct;
-  // }
-  
-  function sizeSanPham(arrSize) {
-    var sizeList = "";
-    for (i = 0; i < arrSize.length; i++) {
-      var sizeListSanPham = arrSize[i];
-      sizeList += `
+  document.getElementById("relatedProducts").innerHTML = related;
+}
+
+// QuickView sản phẩm đang fix
+// function renderQuickeView(arrQuickView) {
+//   var quickViewProduct = "";
+//   for (i = 0; i < arrQuickView.length; i++) {
+//     var relatedSanPham = arrQuickView[i];
+//     quickViewProduct += `
+//   <div class="col-md-6 col-sm-12 col-xs-12">
+//   <div class="detail-gallery">
+//     <span class="zoom-icon"><i class="fi-rs-search"></i></span>
+//     <!-- MAIN SLIDES -->
+//     <div class="product-image-slider">
+//       <figure class="border-radius-10">
+//         <img
+//           src="assets/imgs/shop/product-16-2.jpg"
+//           alt="product image"
+//         />
+//       </figure>
+//       <figure class="border-radius-10">
+//         <img
+//           src="assets/imgs/shop/product-16-1.jpg"
+//           alt="product image"
+//         />
+//       </figure>
+//       <figure class="border-radius-10">
+//         <img
+//           src="assets/imgs/shop/product-16-3.jpg"
+//           alt="product image"
+//         />
+//       </figure>
+//       <figure class="border-radius-10">
+//         <img
+//           src="assets/imgs/shop/product-16-4.jpg"
+//           alt="product image"
+//         />
+//       </figure>
+//       <figure class="border-radius-10">
+//         <img
+//           src="assets/imgs/shop/product-16-5.jpg"
+//           alt="product image"
+//         />
+//       </figure>
+//       <figure class="border-radius-10">
+//         <img
+//           src="assets/imgs/shop/product-16-6.jpg"
+//           alt="product image"
+//         />
+//       </figure>
+//       <figure class="border-radius-10">
+//         <img
+//           src="assets/imgs/shop/product-16-7.jpg"
+//           alt="product image"
+//         />
+//       </figure>
+//     </div>
+//     <!-- THUMBNAILS -->
+//     <div class="slider-nav-thumbnails pl-15 pr-15">
+//       <div>
+//         <img
+//           src="assets/imgs/shop/thumbnail-3.jpg"
+//           alt="product image"
+//         />
+//       </div>
+//       <div>
+//         <img
+//           src="assets/imgs/shop/thumbnail-4.jpg"
+//           alt="product image"
+//         />
+//       </div>
+//       <div>
+//         <img
+//           src="assets/imgs/shop/thumbnail-5.jpg"
+//           alt="product image"
+//         />
+//       </div>
+//       <div>
+//         <img
+//           src="assets/imgs/shop/thumbnail-6.jpg"
+//           alt="product image"
+//         />
+//       </div>
+//       <div>
+//         <img
+//           src="assets/imgs/shop/thumbnail-7.jpg"
+//           alt="product image"
+//         />
+//       </div>
+//       <div>
+//         <img
+//           src="assets/imgs/shop/thumbnail-8.jpg"
+//           alt="product image"
+//         />
+//       </div>
+//       <div>
+//         <img
+//           src="assets/imgs/shop/thumbnail-9.jpg"
+//           alt="product image"
+//         />
+//       </div>
+//     </div>
+//   </div>
+//   <!-- End Gallery -->
+//   <div class="social-icons single-share">
+//     <ul class="text-grey-5 d-inline-block">
+//       <li><strong class="mr-10">Share this:</strong></li>
+//       <li class="social-facebook">
+//         <a href="#"
+//           ><img
+//             src="assets/imgs/theme/icons/icon-facebook.svg"
+//             alt=""
+//         /></a>
+//       </li>
+//       <li class="social-twitter">
+//         <a href="#"
+//           ><img
+//             src="assets/imgs/theme/icons/icon-twitter.svg"
+//             alt=""
+//         /></a>
+//       </li>
+//       <li class="social-instagram">
+//         <a href="#"
+//           ><img
+//             src="assets/imgs/theme/icons/icon-instagram.svg"
+//             alt=""
+//         /></a>
+//       </li>
+//       <li class="social-linkedin">
+//         <a href="#"
+//           ><img
+//             src="assets/imgs/theme/icons/icon-pinterest.svg"
+//             alt=""
+//         /></a>
+//       </li>
+//     </ul>
+//   </div>
+// </div>
+// <div class="col-md-6 col-sm-12 col-xs-12">
+//   <div class="detail-info">
+//   </div>
+//   <!-- Detail Info -->
+// </div>`;
+//   }
+//   document.getElementById("quickView").innerHTML = quickViewProduct;
+// }
+
+function sizeSanPham(arrSize) {
+  var sizeList = "";
+  for (i = 0; i < arrSize.length; i++) {
+    var sizeListSanPham = arrSize[i];
+    sizeList += `
                 <li><a href="#">${sizeListSanPham}</a></li>
                 `;
-    }
-    document.getElementById("sizeSanPham").innerHTML = sizeList;
-  
-    console.log(sizeList);
   }
-  
-  function addTaiKhoan() {
-    event.preventDefault();
-  
-    var taiKhoan = new TaiKhoan();
-    taiKhoan.email = document.getElementById("emailInput").value;
-    taiKhoan.password = document.getElementById("passwordInput").value;
-    taiKhoan.name = document.getElementById("nameInput").value;
-    taiKhoan.gender = document.getElementById("genderInput").value;
-    taiKhoan.phone = document.getElementById("phoneInput").value;
-  
-    console.log(taiKhoan);
-  
-    let promise = axios({
-      url: "https://shop.cyberlearn.vn/api/Users/signup",
-      method: "POST",
-      data: taiKhoan,
-    });
-    promise.then(function (res) {
-      console.log(res);
-      alert("Bạn đã đăng ký thành công");
-    });
-    promise.catch(function (err) {
-      console.log(err);
-      alert("Sai tài khoản hoặc mật khẩu, vui lòng kiểm tra lại");
-    });
-  }
-  
-  function dangNhap() {
-    event.preventDefault();
-  
-    var taiKhoan = new TaiKhoan();
-  
-    taiKhoan.email = document.getElementById("emailLoginInput").value;
-    taiKhoan.password = document.getElementById("passwordLoginInput").value;
-  
-    console.log(taiKhoan);
-  
-    let promise = axios({
-      url: "https://shop.cyberlearn.vn/api/Users/signin",
-      method: "POST",
-      data: taiKhoan,
-    });
-    promise.then(function (res) {
-      console.log(res);
-      alert("Đăng nhập thành công");
-    });
-    promise.catch(function (err) {
-      console.log(err);
-    });
-  }
-  
+  document.getElementById("sizeSanPham").innerHTML = sizeList;
+
+  console.log(sizeList);
+}
+
+function addTaiKhoan() {
+  event.preventDefault();
+
+  var taiKhoan = new TaiKhoan();
+  taiKhoan.email = document.getElementById("emailInput").value;
+  taiKhoan.password = document.getElementById("passwordInput").value;
+  taiKhoan.name = document.getElementById("nameInput").value;
+  taiKhoan.gender = document.getElementById("genderInput").value;
+  taiKhoan.phone = document.getElementById("phoneInput").value;
+
+  console.log(taiKhoan);
+
+  let promise = axios({
+    url: "https://shop.cyberlearn.vn/api/Users/signup",
+    method: "POST",
+    data: taiKhoan,
+  });
+  promise.then(function (res) {
+    console.log(res);
+    alert("Bạn đã đăng ký thành công");
+  });
+  promise.catch(function (err) {
+    console.log(err);
+    
+  });
+}
+
+function dangNhap() {
+  event.preventDefault();
+
+  var taiKhoan = new TaiKhoan();
+
+  taiKhoan.email = document.getElementById("emailLoginInput").value;
+  taiKhoan.password = document.getElementById("passwordLoginInput").value;
+
+  console.log(taiKhoan);
+
+  let promise = axios({
+    url: "https://shop.cyberlearn.vn/api/Users/signin",
+    method: "POST",
+    data: taiKhoan,
+  });
+  promise.then(function (res) {
+    console.log(res);
+    alert("Đăng nhập thành công");
+  });
+  promise.catch(function (err) {
+    console.log(err);
+    alert("Sai tài khoản hoặc mật khẩu, vui lòng kiểm tra lại");
+  });
+}
